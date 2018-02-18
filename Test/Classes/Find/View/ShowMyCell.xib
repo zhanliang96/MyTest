@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ShowMyCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UKQ-Is-9ec">
+                        <rect key="frame" x="10" y="10" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="M0m-U1-sic"/>
+                            <constraint firstAttribute="width" constant="60" id="chP-iU-Lv8"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRs-9p-phk">
+                        <rect key="frame" x="80" y="10" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c33-mn-64A">
+                        <rect key="frame" x="80" y="49" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8b-rg-46D">
+                        <rect key="frame" x="224" y="25" width="80" height="30"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="52U-Xm-gLI"/>
+                            <constraint firstAttribute="width" constant="80" id="8ja-7y-DCJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                        <state key="normal" title="+">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Y8b-rg-46D" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1Sc-gP-eHR"/>
+                    <constraint firstItem="UKQ-Is-9ec" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="GID-yB-Cpj"/>
+                    <constraint firstItem="UKQ-Is-9ec" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="JZi-Aa-lUn"/>
+                    <constraint firstItem="qRs-9p-phk" firstAttribute="top" secondItem="UKQ-Is-9ec" secondAttribute="top" id="hKI-z9-MpJ"/>
+                    <constraint firstItem="c33-mn-64A" firstAttribute="leading" secondItem="UKQ-Is-9ec" secondAttribute="trailing" constant="10" id="hSi-zU-Ivf"/>
+                    <constraint firstItem="qRs-9p-phk" firstAttribute="leading" secondItem="UKQ-Is-9ec" secondAttribute="trailing" constant="10" id="lNP-O3-7Xp"/>
+                    <constraint firstItem="c33-mn-64A" firstAttribute="bottom" secondItem="UKQ-Is-9ec" secondAttribute="bottom" id="shv-Go-ryp"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Y8b-rg-46D" secondAttribute="trailing" id="tAO-U8-OPW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="iconView" destination="UKQ-Is-9ec" id="rb8-dN-cna"/>
+                <outlet property="nameView" destination="qRs-9p-phk" id="Oij-Z6-ZfJ"/>
+                <outlet property="numView" destination="c33-mn-64A" id="pzy-lm-2yZ"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
